@@ -24,6 +24,11 @@ console.log(targetDate.getTime())
 
 function fn () {
     const diff = targetDate.getTime() - Date.now()
+    let sec = Math.floor(diff / 1000) % 60
+    let min = Math.floor(diff / (1000 * 60)) % 60
+    let hours = Math.floor(diff / (1000 * 60 * 60)) % 60
+    let days = Math.floor(diff / (1000 * 60 * 60 * 24)) % 30
+    let month = Math.floor(diff / (1000 * 60 * 60 * 24 * 30))
 
     if (diff <= 0) {
         clearInterval(timer)
