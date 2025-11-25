@@ -11,5 +11,28 @@ const eventTime = document.querySelector('.time')
 if (eventName.value === '' || eventDate.value === '' || eventTime.value === '') {
     warning.textContent = 'Please fill all the inputs';
     return; 
+} else {
+    warning.textContent = ''
 }
+
+
+const targetString = `${eventDate.value}T${eventTime.value}`
+const targetDate = new Date(targetString)
+console.log(targetDate.getTime())
+
+
+
+function fn () {
+    const diff = targetDate.getTime() - Date.now()
+
+    if (diff <= 0) {
+        clearInterval(timer)
+        console.log("Eventet är nått!")
+        return;
+    }
+
+    console.log("Tid kvar (ms):", diff);
+}
+
+const timer = setInterval(fn, 1000)
 })
