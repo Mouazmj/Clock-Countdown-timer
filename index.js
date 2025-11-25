@@ -26,6 +26,7 @@ console.log(targetDate.getTime())
 
 function fn () {
     const diff = targetDate.getTime() - Date.now()
+    const tenYears = 10 * 365 * 24 * 60 * 60 * 1000;
     let sec = Math.floor(diff / 1000) % 60
     let min = Math.floor(diff / (1000 * 60)) % 60
     let hours = Math.floor(diff / (1000 * 60 * 60)) % 60
@@ -34,12 +35,19 @@ function fn () {
 
     if (diff <= 0) {
         clearInterval(timer)
-        console.log("Eventet är nått!")
+        theResults.innerHTML = `<p>D : O : N : E</p>`
+        return;
+    }
+
+
+    if ( diff > tenYears) {
+        warning.textContent = "You can't enter more then 10 years"
+        clearInterval(timer)
         return;
     }
 
     console.log("Tid kvar (ms):", diff);
-    theResults.innerHTML = `<p>${month} ${days} ${hours} ${min} ${sec}</p>`
+    theResults.innerHTML = `<p>${month} : ${days} : ${hours} : ${min} : ${sec} :</p>`
     secondContainer.innerHTML = `<p>Month Days Hours Minutes Seconds</p>`
 }
 
