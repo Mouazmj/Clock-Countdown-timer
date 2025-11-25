@@ -22,6 +22,8 @@ body {
 .warning {
     color: red;
     margin-top: 20px; 
+    font-size: 20px;
+    border-bottom: 2px solid red;
 }
 
 #event-name {
@@ -70,6 +72,14 @@ body {
 .container {
     margin-top: 50px;
     margin-bottom: 10px;
+    font-size: 29px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.nameContainer {
+    position: relative;
+    top: 100px;
+    right: 400px;
     font-size: 29px;
     font-family: 'Courier New', Courier, monospace;
 }
