@@ -1,5 +1,6 @@
 const form = document.querySelector('.eventForm')
 const warning = document.getElementById('warning')
+const theResults = document.querySelector('.container')
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -37,6 +38,7 @@ function fn () {
     }
 
     console.log("Tid kvar (ms):", diff);
+    theResults.innerHTML = `<p>${month} ${days} ${hours} ${min} ${sec}</p>`
 }
 
 const timer = setInterval(fn, 1000)
