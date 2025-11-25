@@ -55,7 +55,7 @@ function fn () {
 
     console.log("Tid kvar (ms):", diff);
     theResults.innerHTML = `<p>${month} : ${days} : ${hours} : ${min} : ${sec}</p>`
-    secondContainer.innerHTML = `<p>Month Days Hours Minutes Seconds</p>`
+    secondContainer.innerHTML = `<p>Month : Days : Hours : Minutes : Seconds</p>`
 }
 
  timer = setInterval(fn, 1000)
