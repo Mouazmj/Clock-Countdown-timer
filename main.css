@@ -4,18 +4,58 @@
     padding: 0;
 }
 
-#eventForm {
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh; 
+    flex-direction: column; 
+    background-color: rgb(31,198,158);
 }
 
-.container {
+#eventForm {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    position: relative;
-    bottom: 600px;
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+.warning {
+    color: red;
+    margin-top: 20px; 
+}
+
+#event-name {
+    padding: 14px;
+    border: 2px solid;
+    font-size: 20px;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+#date {
+    padding: 14px;
+    border: 2px solid;
+    font-size: 20px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+#time {
+    padding: 14px;
+    border: 2px solid;
+    font-size: 20px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+
+#start-button {
+    padding: 14px;
+    border: 2px solid;
+    font-size: 20px;
+    margin-left: 8px;
+    margin-right: 8px;
+    background-color: #FFC107;
+    border-radius: 10px;
+    cursor: pointer;
 }
